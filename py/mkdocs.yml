@@ -1,0 +1,19 @@
+site_name: cipher-sorcery-venture
+site_description: "Cipher-Sorcery-Venture" could be interpreted as a tool that combines the skills of decoding and understanding code (Cipher), employing advanced and magical analysis techniques (Sorcery), and embarking on an adventurous journey to explore and navigate the world of coding (Venture).
+site_author: Cristian Giovanny Sánchez Pineda
+
+repo_url: https://github.com/crisywini/cipher-sorcery-venture
+edit_uri: https://github.com/crisywini/cipher-sorcery-venture/edit/develop/docs
+
+theme: readthedocs
+
+markdown_extensions:
+  - codehilite
+
+nav:
+  - Home: index.md
+  - Advanced: advanced.md
+  - About:
+    - Release Notes: about/changelog.md
+    - Contributor Guide: about/contributing.md
+    - License: about/license.md
