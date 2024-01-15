@@ -1,15 +1,13 @@
 """A sample CLI."""
 
 import click
-import log
 
-from . import utils
+import utils
 
 
 @click.command()
 @click.argument('feet')
 def main(feet: str):
-    log.init()
 
     meters = utils.feet_to_meters(feet)
 

@@ -1,6 +1,5 @@
 """A sample module."""
 
-import log
 
 
 def feet_to_meters(feet):
@@ -8,7 +7,7 @@ def feet_to_meters(feet):
     try:
         value = float(feet)
     except ValueError:
-        log.error("Unable to convert to float: %s", feet)
+        print(f"Unable to convert to float: {feet}")
         return None
     else:
         return (0.3048 * value * 10000.0 + 0.5) / 10000.0
