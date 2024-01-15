@@ -1,19 +1,17 @@
 """A sample CLI."""
 
 import click
-
-import utils
+import gradle_analysis
 
 
 @click.command()
-@click.argument('feet')
-def main(feet: str):
-
-    meters = utils.feet_to_meters(feet)
-
-    if meters is not None:
-        click.echo(meters)
-
+@click.argument('path')
+def main(path: str):
+    try:
+        java_version = gradle_analysis.analyze_java_version(path)
+        click.echo(java_version)
+    except Exception as e:
+        click.echo(e)
 
 if __name__ == '__main__':  # pragma: no cover
     main()  # pylint: disable=no-value-for-parameter
